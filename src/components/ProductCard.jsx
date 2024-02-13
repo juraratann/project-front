@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 
-export default function MedicineCard(props) {
+export default function ProductCard(props) {
   const { el, openModal, setTrigger } = props;
 
   const statusColor = el.status==='PENDING' ? 'bg-pink-300' 
@@ -10,7 +10,7 @@ export default function MedicineCard(props) {
     try {
       e.stopPropagation()
       const token = localStorage.getItem('token')
-      let rs = await axios.delete(`http://localhost:8000/medicine/${el.id}`, {
+      let rs = await axios.delete(`http://localhost:8000/product/${el.id}`, {
         headers : { Authorization : `Bearer ${token}`}
       })
       alert('Delete successful') 

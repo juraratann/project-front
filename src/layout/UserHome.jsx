@@ -1,10 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import MedicineCard from "../components/MedicineCard";
+import ProductCard from "../components/ProductCard";
 import ModalEdit from "../components/ModalEdit";
 
 export default function UserHome() {
-  const [medicine, setMedicine] = useState([]);
+  const [product, setProduct] = useState([]);
   const [editIdx, setEditIdx] = useState(null);
   const [trigger, setTrigger] = useState(false);
 
@@ -12,19 +12,19 @@ export default function UserHome() {
     const fetchData = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("http://localhost:8000/medicine", {
+        const response = await axios.get("http://localhost:8000/product", {
           headers: { Authorization: `Bearer ${token}` },
         });
-        setMedicine(response.data.medicine);
+        setProduct(response.data.product);
       } catch (error) {
-        console.error("Error fetching medicine data:", error);
+        console.error("Error fetching product data:", error);
       }
     };
     fetchData();
   }, [trigger]);
 
   const openModal = (id) => {
-    const idx = medicine.findIndex((el) => el.id === id);
+    const idx = product.findIndex((el) => el.id === id);
     setEditIdx(idx);
     const modal = document.getElementById("my_modal_2");
     if (modal) {
@@ -42,10 +42,10 @@ export default function UserHome() {
   return (
     <div className="flex flex-col gap-4">
       <div className="text-center text-2xl text-blue-500">Best selling products</div>
-      <ModalEdit el={medicine[editIdx]} closeModal={closeModal} setTrigger={setTrigger} />
+      <ModalEdit el={product[editIdx]} closeModal={closeModal} setTrigger={setTrigger} />
       <div className="flex flex-col gap-4">
-        {medicine.map((el) => (
-          <MedicineCard key={el.id} el={el} openModal={openModal} setTrigger={setTrigger} />
+        {product.map((el) => (
+          <ProductCard key={el.id} el={el} openModal={openModal} setTrigger={setTrigger} />
         ))}
       </div>
       <div>
@@ -99,10 +99,10 @@ export default function UserHome() {
       </div>
       <div className="flex flex-col gap-4">
       <div className="text-center text-2xl text-blue-500">Recommended products</div>
-      <ModalEdit el={medicine[editIdx]} closeModal={closeModal} setTrigger={setTrigger} />
+      <ModalEdit el={product[editIdx]} closeModal={closeModal} setTrigger={setTrigger} />
       <div className="flex flex-col gap-4">
-        {medicine.map((el) => (
-          <MedicineCard key={el.id} el={el} openModal={openModal} setTrigger={setTrigger} />
+        {product.map((el) => (
+          <ProductCard key={el.id} el={el} openModal={openModal} setTrigger={setTrigger} />
         ))}
       </div>
       <div>

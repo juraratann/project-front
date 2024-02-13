@@ -1,5 +1,6 @@
 import axios from 'axios'
-import {useState} from "react";
+import { useState } from "react";
+import { Link } from 'react-router-dom'
 
 export default function RegisterForm() {
   const [input, setInput] = useState({
@@ -7,13 +8,14 @@ export default function RegisterForm() {
     lname: '',
     address: '',
     phone: '',
-    email : '',
-    username : '', 
-    password : ''
+    email: '',
+    username: '',
+    password: '',
+    confirmPassword: ''
   })
 
   const hdlChange = e => {
-    setInput( prv => ( { ...prv, [e.target.name] : e.target.value } ) )
+    setInput(prev => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
   const hdlSubmit = async e => {
@@ -28,10 +30,9 @@ export default function RegisterForm() {
       if(rs.status === 200) {
         alert('Register Successful')
       }
-    }catch(err) {
-      console.log( err.message)
+    } catch(err) {
+      console.log(err.message)
     }
-
   }
 
   return (
@@ -40,50 +41,50 @@ export default function RegisterForm() {
       <form className="flex flex-col gap-2" onSubmit={hdlSubmit}>
         <label className="form-control w-full max-w-xs">
           <div className="label">
-            <span className="label-text">name</span>
+            <span className="label-text">Name</span>
           </div>
           <input
             type="text"
             className="input input-bordered w-full max-w-xs"
             name="name"
             value={input.name}
-            onChange={ hdlChange }
+            onChange={hdlChange}
           />
         </label>
         <label className="form-control w-full max-w-xs">
           <div className="label">
-            <span className="label-text">lname</span>
+            <span className="label-text">Last Name</span>
           </div>
           <input
             type="text"
             className="input input-bordered w-full max-w-xs"
             name="lname"
             value={input.lname}
-            onChange={ hdlChange }
+            onChange={hdlChange}
           />
         </label>
         <label className="form-control w-full max-w-xs">
           <div className="label">
-            <span className="label-text">address</span>
+            <span className="label-text">Address</span>
           </div>
           <input
             type="text"
             className="input input-bordered w-full max-w-xs"
             name="address"
             value={input.address}
-            onChange={ hdlChange }
+            onChange={hdlChange}
           />
         </label>
         <label className="form-control w-full max-w-xs">
           <div className="label">
-            <span className="label-text">phone</span>
+            <span className="label-text">Phone</span>
           </div>
           <input
             type="phone"
             className="input input-bordered w-full max-w-xs"
             name="phone"
             value={input.phone}
-            onChange={ hdlChange }
+            onChange={hdlChange}
           />
         </label>
         <label className="form-control w-full max-w-xs">
@@ -95,34 +96,46 @@ export default function RegisterForm() {
             className="input input-bordered w-full max-w-xs"
             name="email"
             value={input.email}
-            onChange={ hdlChange }
+            onChange={hdlChange}
           />
         </label>
         <label className="form-control w-full max-w-xs">
           <div className="label">
-            <span className="label-text">username</span>
+            <span className="label-text">Username</span>
           </div>
           <input
             type="text"
             className="input input-bordered w-full max-w-xs"
             name="username"
             value={input.username}
-            onChange={ hdlChange }
+            onChange={hdlChange}
           />
         </label>
         <label className="form-control w-full max-w-xs">
           <div className="label">
-            <span className="label-text">password</span>
+            <span className="label-text">Password</span>
           </div>
           <input
             type="password"
             className="input input-bordered w-full max-w-xs"
             name="password"
-            value={ input.password }
-            onChange={ hdlChange }
+            value={input.password}
+            onChange={hdlChange}
           />
         </label>
-        <div className="flex gap-5 ">
+        <label className="form-control w-full max-w-xs">
+          <div className="label">
+            <span className="label-text">Confirm Password</span>
+          </div>
+          <input
+            type="password"
+            className="input input-bordered w-full max-w-xs"
+            name="confirmPassword"
+            value={input.confirmPassword}
+            onChange={hdlChange}
+          />
+        </label>
+        <div className="flex gap-5">
           <button type="submit" className="btn btn-outline btn-info mt-7">Submit</button>
           <button type="reset" className="btn btn-outline btn-warning mt-7">Reset</button>
         </div>

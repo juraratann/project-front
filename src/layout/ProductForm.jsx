@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import axios from 'axios'; // นำเข้า axios
+import axios from 'axios'; 
 
-export default function MedicineForm() {
+export default function ProductForm() {
   const [input, setInput] = useState({
     name: '',
     detail: '',
     price: '',
-    stock: '',
-    unit: ''
+    stock: ''
   })
 
   const hdlChange = e => {
@@ -19,10 +18,10 @@ export default function MedicineForm() {
       e.preventDefault();
       const output = { ...input };
       const token = localStorage.getItem('token');
-      const rs = await axios.post('http://localhost:8000/medicine', output, {
+      const rs = await axios.post('http://localhost:8000/product', output, {
         headers: { Authorization: `Bearer ${token}` }
       });
-      console.log(rs.data); // แสดงข้อมูลที่ส่งกลับจากเซิร์ฟเวอร์
+      console.log(rs.data);
     } catch (err) {
       alert(err.message);
     }

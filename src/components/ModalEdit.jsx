@@ -8,7 +8,6 @@ export default function ModalEdit(props) {
     detail: "",
     price: "",
     stock: "",
-    unit: "",
   });
   const [status, setStatus] = useState([])
 
@@ -25,7 +24,6 @@ export default function ModalEdit(props) {
       detail: el?.detail ?? "",
       price: el?.price ?? "",
       stock: el?.stock ?? "",
-      unit: el?.unit ?? "",
     });
   }, [el?.id]);
 
@@ -39,7 +37,7 @@ export default function ModalEdit(props) {
 
       const output = { ...input };
       const token = localStorage.getItem("token");
-      const rs = await axios.put(`http://localhost:8000/medicine/${el.id}`, output, {
+      const rs = await axios.put(`http://localhost:8000/product/${el.id}`, output, {
         headers: { Authorization: `Bearer ${token}` }
       })
       

@@ -8,7 +8,6 @@ export default function Modal(props) {
     detail: "",
     price: "",
     stock: "",
-    unit: "",
   });
   const [status, setStatus] = useState([]);
   
@@ -16,7 +15,7 @@ export default function Modal(props) {
     if (status.length) { return }
     const run = async () => {
       const token = localStorage.getItem('token');
-      const rs = await axios.get('http://localhost:8000/medicine/all-status', {
+      const rs = await axios.get('http://localhost:8000/product/all-status', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setStatus(rs.data.status);
@@ -30,7 +29,6 @@ export default function Modal(props) {
       detail: el?.detail ?? "",
       price: el?.price ?? "",
       stock: el?.stock ?? "",
-      unit: el?.unit ?? "",
     });
   }, [el?.id]);
 
@@ -42,7 +40,7 @@ export default function Modal(props) {
     try {
       e.preventDefault();
       const token = localStorage.getItem("token");
-      const rs = await axios.put(`http://localhost:8000/medicine/${el.id}`, input, {
+      const rs = await axios.put(`http://localhost:8000/product/${el.id}`, input, {
         headers: { Authorization: `Bearer ${token}` }
       });
       console.log(rs);
