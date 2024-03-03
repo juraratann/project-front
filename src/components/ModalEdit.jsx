@@ -104,19 +104,6 @@ export default function ModalEdit(props) {
               onChange={hdlChange}
             />
           </label>
-          <label className="form-control w-full ">
-            <div className="label">
-              <span className="label-text">Unit</span>
-            </div>
-            <input
-              type="text"
-              placeholder="Type here"
-              className="input input-bordered w-full"
-              name="unit"
-              value={input.unit}
-              onChange={hdlChange}
-            />
-          </label>
           <button type='submit' className="btn btn-primary">Update</button>
           <button type='button' className="btn btn-secondary" onClick={closeModal}>Cancel</button>
         </form>

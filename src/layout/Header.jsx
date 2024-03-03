@@ -35,10 +35,29 @@ export default function Header() {
                 <Link className="text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&amp;.active]:text-black/90 dark:[&amp;.active]:text-neutral-400" to="/new" data-te-nav-link-ref="">Pharmacy</Link>
               </li>
               <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref="">
-                <Link className="text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&amp;.active]:text-black/90 dark:[&amp;.active]:text-neutral-400" to="#" data-te-nav-link-ref="">Settings</Link>
+                <Link className="text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&amp;.active]:text-black/90 dark:[&amp;.active]:text-neutral-400" to="/file" data-te-nav-link-ref="" >Settings</Link>
+              </li>
+              <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref="">
+                <Link className="text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&amp;.active]:text-black/90 dark:[&amp;.active]:text-neutral-400" to="/pro" data-te-nav-link-ref="">Add</Link>
+              </li>
+              <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref="">
+                <Link className="text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&amp;.active]:text-black/90 dark:[&amp;.active]:text-neutral-400" to="/user" data-te-nav-link-ref="">ShowUser</Link>
               </li>
             </ul>
           </div>
+          <div className="dropdown">
+                                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+                                    
+                                </div>
+                                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                                    {user?.id && (
+                                        <li className='btn-error'>
+                                            <Link to='#' className="text-red-500" onClick={hdlLogout}>Logout</Link>
+                                        </li>
+                                    )}<a></a>
+                                </ul>
+                            </div>
           <div className="relative flex items-center">
             <Link className="mr-4 text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 [&amp;.active]:text-black/90 dark:[&amp;.active]:text-neutral-400" to="/add">
               <span className="[&amp;>svg]:w-5">
@@ -50,21 +69,7 @@ export default function Header() {
            
             <div className="relative" data-te-dropdown-ref="" data-te-dropdown-alignment="end">
               <Link className="hidden-arrow flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none" to="#" id="dropdownMenuButton2" role="button" data-te-dropdown-toggle-ref="" aria-expanded="false">
-                <img src="https://scontent.fkkc3-1.fna.fbcdn.net/v/t39.30808-6/399618347_1526128178144277_7133057298971345633_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9c7eae&_nc_eui2=AeGei7STQzJQPVpTH_AlaF5lrEJd0wayqzesQl3TBrKrNxNf1vmb0dEkHh_d92JJAybttCEWLFvvT9dCnSPhH1gC&_nc_ohc=OL64gG_J2dgAX_Nz-FR&_nc_ht=scontent.fkkc3-1.fna&oh=00_AfA8taXL1cNP6dde7ju1m9ntVwQ8inIuJgR5mV7t0MWuyw&oe=65D15BF0" className="rounded-full" style={{ height: "25px", width: "25px" }} alt="" loading="lazy" />
-                <div className="dropdown">
-                                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
-                                </div>
-                                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                                    <li><a>Homepage</a></li>
-                                    <li><Link to='/About'>About</Link></li>
-                                    {user?.id && (
-                                        <li className='btn-error'>
-                                            <Link to='#' className="text-red-500" onClick={hdlLogout}>Logout</Link>
-                                        </li>
-                                    )}<a></a>
-                                </ul>
-                            </div>
+                <img src="https://scontent.fkkc3-1.fna.fbcdn.net/v/t39.30808-6/419584935_1559040918186336_8233708977485550932_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9c7eae&_nc_ohc=GDd9qo0U9V8AX94y1Jr&_nc_ht=scontent.fkkc3-1.fna&oh=00_AfAuk0MXEt9rp00C5WvWw1budUaS5kBNgrFfwENJiF0j1Q&oe=65E41E9C" className="rounded-full" style={{ height: "25px", width: "25px" }} alt="" loading="lazy" />
               </Link>
              
             </div>

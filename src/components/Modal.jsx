@@ -15,7 +15,7 @@ export default function Modal(props) {
     if (status.length) { return }
     const run = async () => {
       const token = localStorage.getItem('token');
-      const rs = await axios.get('http://localhost:8000/product/all-status', {
+      const rs = await axios.get('http://localhost:8000/products/all-status', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setStatus(rs.data.status);

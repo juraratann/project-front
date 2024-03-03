@@ -25,7 +25,7 @@ export default function AddProduct() {
       formData.append("stock", input.stock); 
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        "http://localhost:8000/product", 
+        "http://localhost:8000/product/pro", 
         formData,
         {
           headers: {
@@ -54,11 +54,9 @@ export default function AddProduct() {
   return (
     <form
       className="flex flex-row rounded w-4/6 mx-auto p-4 gap-6 m-10 mt-1"
-      onSubmit={hdlSubmit}
-    >
+      onSubmit={hdlSubmit}>
       <div>
         <h1 className='text-white mt-[-70px] ml-[-200px]'>
-        <Link to="/">Home</Link>
         </h1>
       </div>
       <div>
