@@ -33,6 +33,7 @@ export default function LoginForm() {
   }
 
   return (
+    
     <form className="max-w-sm mx-auto" onSubmit={hdlSubmit}>
       <div className="mb-5">
       <svg width="300" height="300" viewBox="0 0 389 300" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -62,11 +63,9 @@ export default function LoginForm() {
         />
       </div>
       <div className="mt-7 flex justify-between">
-  <button type="submit" className="btn btn-outline btn-info">Log in</button>
-  <Link className="btn btn-outline btn-info mr-10" to="/register">Sign up</Link>
+      <button type="submit" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Login</button>
+  <Link class="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-10 me-2 mb-2" to="/register">Sign up</Link>
 </div>
-
-
 
     </form>
   );

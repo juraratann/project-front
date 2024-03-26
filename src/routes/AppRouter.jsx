@@ -18,6 +18,8 @@ import AdminTransaction from "../admin/AdminTransaction";
 import AdminMember from "../admin/AdminMember";
 import AdminHome from "../admin/AdminHome";
 import AdminProfile from "../admin/AdminProfile";
+import OrderComplete from "../layout/OrderComplete";
+import Home from "../layout/Home";
 
 
 
@@ -49,7 +51,7 @@ const userRouter = createBrowserRouter([
       </>
     ),
     children: [
-      { index: true, element:<UserHome /> },
+      { index: true, element:  <UserHome />},
       { path: "/home", element: <UserHome/> },
       { path: "/new", element: <Order/> },
       { path: "/card", element: <Card /> },
@@ -58,7 +60,8 @@ const userRouter = createBrowserRouter([
       { path: "/pro", element: <ProductForm /> },
       { path: "/user", element: <ShowUser /> },
       { path: "/file", element: <ProfilePang /> },
-
+      { path: "/com", element: <OrderComplete /> },
+      { path: "/ho", element: < Home/> },
     ],
   },
 ]);

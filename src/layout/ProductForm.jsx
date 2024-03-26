@@ -40,7 +40,7 @@ const hdlSubmit = async (e) => {
     <div style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
 
                 <div className="text-3xl mb-6 font-bold text-center text-blue-600"></div>
-                <div className="p-12  border w-full md:w-3/4 lg:w-3/4 xl:w-3/4 mx-auto rounded-lg mt-10 bg-gradient-to-r bg-gray-300/100 shadow-md">
+                <div className="p-12  border w-full md:w-3/4 lg:w-3/4 xl:w-3/4 mx-auto rounded-lg mt-10 bg-gradient-to-r bg-gray-100 shadow-md">
                     <form onSubmit={hdlSubmit}>
                         <label className="form-control w-full ">
                             <div className="label">

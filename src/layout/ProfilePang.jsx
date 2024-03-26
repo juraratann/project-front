@@ -13,7 +13,7 @@ export default function ProfilePang() {
 
       <span class="text-gray-600">This information is secret so be careful</span>
       <div class="w-full p-8 mx-2 flex justify-center">
-        <img id="showImage" class="max-w-xs w-32 items-center border" src="https://scontent.fkkc3-1.fna.fbcdn.net/v/t39.30808-6/419584935_1559040918186336_8233708977485550932_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9c7eae&_nc_ohc=GDd9qo0U9V8AX94y1Jr&_nc_ht=scontent.fkkc3-1.fna&oh=00_AfAuk0MXEt9rp00C5WvWw1budUaS5kBNgrFfwENJiF0j1Q&oe=65E41E9C" alt=""/>                          
+        <img id="showImage" class="max-w-xs w-32 items-center border" src="https://scontent.fkkc3-1.fna.fbcdn.net/v/t39.30808-6/419584935_1559040918186336_8233708977485550932_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeF-9zt2PUlYvYdvy0aX0oosUgqEt_Yh-clSCoS39iH5yWONOgISFjVlDPiMCmYzgH3bNJpJ-eclJIgW_aiXFpKp&_nc_ohc=_gh4OSF25fYAX-XI7hi&_nc_ht=scontent.fkkc3-1.fna&oh=00_AfBUoaUU68j7CWvI-55fSm2p-9YBtNrTYMR68dVGqFJXtw&oe=65FDD3DC" alt=""/>                          
         </div>
     </div>
     

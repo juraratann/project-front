@@ -43,6 +43,7 @@ export default function Header() {
               <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref="">
                 <Link className="text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&amp;.active]:text-black/90 dark:[&amp;.active]:text-neutral-400" to="/user" data-te-nav-link-ref="">ShowUser</Link>
               </li>
+              
             </ul>
           </div>
           <div className="dropdown">
@@ -69,7 +70,7 @@ export default function Header() {
            
             <div className="relative" data-te-dropdown-ref="" data-te-dropdown-alignment="end">
               <Link className="hidden-arrow flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none" to="#" id="dropdownMenuButton2" role="button" data-te-dropdown-toggle-ref="" aria-expanded="false">
-                <img src="https://scontent.fkkc3-1.fna.fbcdn.net/v/t39.30808-6/419584935_1559040918186336_8233708977485550932_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9c7eae&_nc_ohc=GDd9qo0U9V8AX94y1Jr&_nc_ht=scontent.fkkc3-1.fna&oh=00_AfAuk0MXEt9rp00C5WvWw1budUaS5kBNgrFfwENJiF0j1Q&oe=65E41E9C" className="rounded-full" style={{ height: "25px", width: "25px" }} alt="" loading="lazy" />
+                <img src="https://scontent.fkkc3-1.fna.fbcdn.net/v/t39.30808-6/419584935_1559040918186336_8233708977485550932_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeF-9zt2PUlYvYdvy0aX0oosUgqEt_Yh-clSCoS39iH5yWONOgISFjVlDPiMCmYzgH3bNJpJ-eclJIgW_aiXFpKp&_nc_ohc=_gh4OSF25fYAX-XI7hi&_nc_ht=scontent.fkkc3-1.fna&oh=00_AfBUoaUU68j7CWvI-55fSm2p-9YBtNrTYMR68dVGqFJXtw&oe=65FDD3DC" className="rounded-full" style={{ height: "25px", width: "25px" }} alt="" loading="lazy" />
               </Link>
              
             </div>
